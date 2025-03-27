@@ -75,6 +75,11 @@
     },
     {
       "type": "extension",
+      "name": "aliyun_asr",
+      "version": "=0.1.0"
+    },
+    {
+      "type": "extension",
       "name": "vision_tool_python",
       "version": "=0.1.0"
     },
@@ -122,6 +127,11 @@
       "type": "extension",
       "name": "elevenlabs_tts_python",
       "version": "=0.1.0"
+    },
+    {
+      "type": "extension",
+      "name": "cosy_tts_python",
+      "version": "0.1.0"
     },
     {
       "type": "extension",
