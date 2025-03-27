@@ -34,7 +34,7 @@
             "extension_group": "stt",
             "property": {
               "api_key": "${env:DEEPGRAM_API_KEY}",
-              "language": "en-US",
+              "language": "zh-CN",
               "model": "nova-2",
               "sample_rate": 16000
             }
@@ -48,10 +48,10 @@
               "api_key": "${env:QWEN_API_KEY}",
               "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
               "frequency_penalty": 0.9,
-              "greeting": "How can I help you today?",
+              "greeting": "你好，有什么可以帮助你的吗？",
               "max_memory_length": 10,
               "max_tokens": 512,
-              "model": "${env:QWEN_API_KEY}",
+              "model": "${env:QWEN_MODEL}",
               "prompt": "",
               "proxy_url": "${env:OPENAI_PROXY_URL}"
             }
@@ -59,19 +59,13 @@
           {
             "type": "extension",
             "name": "tts",
-            "addon": "elevenlabs_tts_python",
+            "addon": "cosy_tts_python",
             "extension_group": "tts",
             "property": {
-              "api_key": "${env:ELEVENLABS_TTS_KEY}",
-              "base_url": "",
-              "model_id": "eleven_multilingual_v2",
-              "optimize_streaming_latency": 0,
-              "prompt": "",
-              "request_timeout_seconds": 30,
-              "similarity_boost": 0.75,
-              "speaker_boost": false,
-              "stability": 0.5,
-              "voice_id": "pNInz6obpgDQGcFmaJgB"
+              "api_key": "${env:QWEN_API_KEY}",
+              "model": "cosyvoice-v1",
+              "sample_rate": 16000,
+              "voice": "longxiaochun"
             }
           },
           {
@@ -316,14 +310,13 @@
           {
             "type": "extension",
             "name": "tts",
-            "addon": "fish_audio_tts",
+            "addon": "cosy_tts_python",
             "extension_group": "tts",
             "property": {
-              "api_key": "${env:FISH_AUDIO_TTS_KEY}",
-              "model_id": "d8639b5cc95548f5afbcfe22d3ba5ce5",
-              "optimize_streaming_latency": true,
-              "request_timeout_seconds": 30,
-              "base_url": "https://api.fish.audio"
+              "api_key": "${env:QWEN_API_KEY}",
+              "model": "cosyvoice-v1",
+              "sample_rate": 16000,
+              "voice": "longxiaochun"
             }
           },
           {
@@ -707,13 +700,13 @@
           {
             "type": "extension",
             "name": "stt",
-            "addon": "deepgram_asr_python",
+            "addon": "aliyun_asr",
             "extension_group": "stt",
             "property": {
-              "api_key": "${env:DEEPGRAM_API_KEY}",
-              "language": "en-US",
-              "model": "nova-2",
-              "sample_rate": 16000
+              "appkey": "${env:ALIYUN_ASR_APPKEY}",
+              "akid": "${env:ALIYUN_ASR_AKID}",
+              "aksecret": "${env:ALIYUN_ASR_AKKEY}",
+              "api_url": "wss://nls-gateway.aliyuncs.com/ws/v1"
             }
           },
           {

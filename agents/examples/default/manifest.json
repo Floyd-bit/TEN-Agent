@@ -75,6 +75,11 @@
     },
     {
       "type": "extension",
+      "name": "bytedance_asr",
+      "version": "=0.1.0"
+    },
+    {
+      "type": "extension",
       "name": "aliyun_asr",
       "version": "=0.1.0"
     },
