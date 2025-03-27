@@ -14,7 +14,7 @@ import {
 } from "@/store/reducers/global"
 import AgentVoicePresetSelect from "@/components/Agent/VoicePresetSelect"
 import AgentView from "@/components/Agent/View"
-import Avatar from "@/components/Agent/AvatarTrulience"
+import Avatar from "@/components/Agent/Live2d"
 import MicrophoneBlock from "@/components/Agent/Microphone"
 import VideoBlock from "@/components/Agent/Camera"
 import dynamic from "next/dynamic"
@@ -133,7 +133,7 @@ export default function RTCCard(props: { className?: string }) {
   return (
     <div className={cn("flex h-full flex-col min-h-0", className)}>
       {/* Scrollable top region (Avatar or ChatCard) */}
-      <div className="min-h-0 overflow-y-auto z-10">
+      {/* <div className="min-h-0 overflow-y-auto z-10">
         {useTrulienceAvatar ? (
           !avatarInLargeWindow ? (
             <div className="h-60 w-full p-1">
@@ -148,6 +148,13 @@ export default function RTCCard(props: { className?: string }) {
         ) : (
           <AgentView  audioTrack={remoteuser?.audioTrack} />
         )}
+      </div> */}
+
+      <div className="min-h-0 overflow-y-auto z-10">
+            <div className="h-60 w-full p-1">
+              <Avatar localAudioTrack={audioTrack} audioTrack={remoteuser?.audioTrack} />
+            </div>
+          <AgentView  audioTrack={remoteuser?.audioTrack} />
       </div>
 
       {/* Bottom region for microphone and video blocks */}

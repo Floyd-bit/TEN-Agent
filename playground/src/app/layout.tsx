@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from "next"
 import { Toaster } from "@/components/ui/sonner"
 
 import "./global.css"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "TEN Agent | Real-Time Multimodal AI Agent",
@@ -31,6 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script src="/live2d.min.js" />
+      <Script src="/live2dcubismcore.min.js" />
       <body className="dark">
         {/* <ConfigProvider
           theme={{
