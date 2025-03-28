@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: 
+ * @Date: 2025-03-28 16:49:55
+ * @LastEditors: 赵卓轩
+ * @LastEditTime: 2025-03-28 17:08:29
+ */
 // import { ConfigProvider } from "antd";
 import { StoreProvider } from "@/store"
 import type { Metadata, Viewport } from "next"
@@ -32,8 +40,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script src="/live2d.min.js" />
-      <Script src="/live2dcubismcore.min.js" />
+      <Script src="/ten-agent/live2d.min.js" />
+      <Script src="/ten-agent/live2dcubismcore.min.js" />
       <body className="dark">
         {/* <ConfigProvider
           theme={{
