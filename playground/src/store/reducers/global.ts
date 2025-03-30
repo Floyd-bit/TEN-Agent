@@ -54,7 +54,7 @@ const getInitialState = (): InitialState => {
     language: "en-US",
     voiceType: "male",
     chatItems: [],
-    selectedGraphId: "",
+    selectedGraphId: "voice_assistant",
     graphList: [],
     graphMap: {},
     addonModules: [],

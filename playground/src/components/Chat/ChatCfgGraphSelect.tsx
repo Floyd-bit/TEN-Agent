@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: 
+ * @Date: 2025-03-28 16:49:55
+ * @LastEditors: 赵卓轩
+ * @LastEditTime: 2025-03-30 17:58:59
+ */
 import * as React from "react"
 import {
   Select,
@@ -27,7 +35,7 @@ export function RemoteGraphSelect() {
     const graphOptions = graphs.map((item) => ({
       label: item,
       value: item,
-    }))
+    })).filter((item) => item.value == "voice_assistant");
   
     return (
       <>

@@ -100,10 +100,10 @@ export function HeaderRoomInfo() {
 export function HeaderActions() {
   return (
     <div className="flex space-x-2 md:space-x-4">
-      <NextLink href={GITHUB_URL} target="_blank">
+      {/* <NextLink href={GITHUB_URL} target="_blank">
         <GitHubIcon className="h-4 w-4 md:h-5 md:w-5" />
         <span className="sr-only">GitHub</span>
-      </NextLink>
+      </NextLink> */}
       <ThemePalettePopover />
       <NetworkIndicator />
     </div>
